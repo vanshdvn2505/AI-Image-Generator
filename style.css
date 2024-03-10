@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #05020e;
+    color: white;
+}
+
+.container1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.input{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.output{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.input-box{
+    height: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 3rem;
+    border: 10px solid rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.input-box input{
+    height: 80%;
+    width: 65%;
+    border-radius: 3rem 0 0 3rem;
+    border: none;
+    outline: none;
+    padding-left: 2%;
+    font-size: 1rem;
+}
+
+.btn{
+    height: 80%;
+    width: 30%;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    background-color: #704fff;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    height: 70%;
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: white;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #533e2dc4
+     0 0 50px #533e2d
+     0 0 100px #533e2d;
+     animation: animate 15s linear infinite;
+     animation-duration: calc(78s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #28282f;
+    box-shadow: 0 0 0 10px #242331bc
+    0 0 50px #242331
+    0 0 100px #242331;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+@media  (max-width: 981px) and (min-width: 707px) {
+    .heading{
+        font-size: 1.5rem;
+    }
+    .image{
+        height: 60%;
+        width: 90%;
+    }
+}
+
+@media  (max-width: 707px) and (min-width: 600px) {
+    .heading{
+        font-size: 1.30rem;
+    }
+    .image{
+        height: 55%;
+        width: 90%;
+    }
+}
+@media  (max-width: 600px) and (min-width: 560px) {
+    .heading{
+        font-size: 1.2rem;
+    }
+    .btn{
+        font-size: 0.7rem;
+    }
+    .image{
+        height: 50%;
+        width: 90%;
+    }
+    
+}
+@media  (max-width: 560px) and (min-width: 390px) {
+    .heading{
+        font-size: 1.5rem;
+        width: 70%;
+        height: 50%;
+    }
+    .btn{
+        font-size: 0.7rem;
+    }
+    .input-box{
+        height: 20%;
+        width: 100%;
+    }
+    .image{
+        height: 70%;
+        width: 90%;
+    }
+    .input, .output{
+        height: 50%;
+        width: 70%;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    
+}
+@media  (max-width: 390px) and (min-width: 350px) {
+    .heading{
+        font-size: 1.5rem;
+        width: 70%;
+        height: 50%;
+    }
+    .input-box{
+        height: 20%;
+        width: 100%;
+    }
+    .image{
+        height: 60%;
+        width: 90%;
+    }
+    .input, .output{
+        height: 50%;
+        width: 70%;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    
+}
+@media  (max-width: 350px){
+    .heading{
+        font-size: 1.25rem;
+        width: 70%;
+        height: 50%;
+    }
+    .input-box{
+        height: 20%;
+        width: 100%;
+    }
+    .btn{
+        font-size: 0.7rem;
+    }
+    .image{
+        height: 60%;
+        width: 90%;
+    }
+    .input, .output{
+        height: 50%;
+        width: 70%;
+    }
+    .container1{
+        flex-direction: column;
+    }
+}
